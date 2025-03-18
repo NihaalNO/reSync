@@ -8,3 +8,11 @@ An open innovation platform powered by blockchain, where innovators, researchers
 - 4. Decentralized Peer Review & Voting – Community-driven validation of ideas through transparent voting mechanisms to identify the best innovations.
 - 5. Cross-Industry Collaboration – Businesses, startups, and researchers can find partners, solve industry challenges, and launch co-developed solutions.
 - 6. DAO for Governance – A Decentralized Autonomous Organization (DAO) ensures that decision-making is democratic and community-driven.
+
+# Use Cases:
+
+- Startups can share their ideas securely while attracting investors and collaborators.
+
+- Enterprises can crowdsource innovative solutions without the risk of idea theft.
+
+- Researchers can monetize patents and discoveries while ensuring attribution transparency.
