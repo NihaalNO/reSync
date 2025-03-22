@@ -1,113 +1,77 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const LandingPage: React.FC = () => {
+  const handleConnect = () => {
+    alert("Connect your wallet");
+  };
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-slate-100 font-sans">
+      {/* Header */}
+      <header className="bg-slate-900 text-white py-8 text-center">
+        <h1 className="text-3xl font-bold">Decentralized Open Innovation Hub</h1>
+        <p className="mt-2">Protect, Collaborate, and Innovate on the Blockchain</p>
+      </header>
+
+      {/* Hero Section */}
+      <div className="bg-blue-600 text-white py-16 px-4 text-center">
+        <h2 className="text-2xl font-bold mb-4">Empowering Innovators with Blockchain</h2>
+        <p className="max-w-2xl mx-auto">Timestamp your ideas, collaborate securely, and earn tokenized rewards.</p>
+      </div>
+
+      {/* Features Section */}
+      <div className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card className="shadow-md hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-center">IP Protection</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-gray-600">Store and timestamp ideas securely on the blockchain.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-md hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-center">Decentralized Voting</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-gray-600">Validate ideas through token-based voting.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-md hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="text-center">Token Rewards</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-gray-600">Earn INNO tokens for contributions and collaborations.</p>
+            </CardContent>
+          </Card>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-green-600 text-white py-16 px-4 text-center">
+        <h2 className="text-2xl font-bold mb-6">Get Started</h2>
+        <Button 
+          onClick={handleConnect} 
+          variant="outline" 
+          className="bg-white text-green-600 hover:bg-gray-100"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          Connect Wallet
+        </Button>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-4 text-center">
+        <p>&copy; 2025 Decentralized Open Innovation Hub. All rights reserved.</p>
       </footer>
     </div>
   );
-}
+};
+
+export default LandingPage;
