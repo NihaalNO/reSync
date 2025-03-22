@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # reSync
 An open innovation platform powered by blockchain, where innovators, researchers, and startups can collaborate securely while protecting intellectual property (IP). The platform uses smart contracts to ensure fair attribution, revenue sharing, and IP rights management in a transparent and tamper-proof way.
 # Key Features:
@@ -27,6 +28,8 @@ An open innovation platform powered by blockchain, where innovators, researchers
 
 
 =======
+=======
+>>>>>>> 0d2f6fb1db80cafdff144956812eda82c355c8e3
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
@@ -67,4 +70,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+<<<<<<< HEAD
 >>>>>>> f3900f5 (Initial commit from Create Next App)
+=======
+>>>>>>> 0d2f6fb1db80cafdff144956812eda82c355c8e3
