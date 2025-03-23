@@ -18,8 +18,8 @@ An open innovation platform powered by blockchain, where innovators, researchers
 - AI-powered plagiarism detection
 - NFT-based patents for unique innovations
 - Cross-chain integration (Ethereum, BSC)
-- Smart Contract Licensing & Revenue Sharing:** Automate licensing deals and ensure fair payouts.
-- Tokenized Rewards (INNO Token):** Incentivizing innovation with ERC-20 tokens.
+- Smart Contract Licensing & Revenue Sharing: Automate licensing deals and ensure fair payouts.
+- Tokenized Rewards (INNO Token): Incentivizing innovation with ERC-20 tokens.
 
 # Contributors
 - https://github.com/iprasannamb
