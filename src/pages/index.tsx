@@ -9,8 +9,9 @@ import {
   Layers, 
   Award
 } from "lucide-react";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { InfiniteMovingLensCards } from "@/components/ui/infinite-moving-cards";
 import { SparklesCore } from "@/components/ui/sparkles";
+import Link from "next/link";
 
 
 const LandingPage = () => {
@@ -191,7 +192,7 @@ const LandingPage = () => {
 </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="relative py-16 px-4 bg-black">
+      <section ref={featuresRef} className="relative py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="mb-2 text-600 text-sm md:text-base font-mono tracking-wider text-center text-transparent bg-clip-text bg-gradient-to-b from-gray-200 via-gray-400 to-gray-600 drop-shadow-sm">
             BLOCKCHAIN POWERED FEATURES
@@ -202,8 +203,12 @@ const LandingPage = () => {
           </h2>
 
           <div className="h-[20rem] rounded-md flex flex-col antialiased bg-black dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-            <InfiniteMovingCards
-              items={testimonials}
+            <InfiniteMovingLensCards
+              items={testimonials.map(item => ({
+                title: item.title,
+                description: item.quote,
+                imageSrc: item.imageSrc
+              }))}
               direction="right"
               speed="fast"
             />
@@ -218,12 +223,13 @@ const LandingPage = () => {
       <div className="bg-black text-white py-16 px-4 text-center">
         <h2 className="text-2xl font-bold mb-6">Ready to Innovate?</h2>
         <p className="max-w-2xl mx-auto mb-6">Join our community of innovators and start protecting your ideas today.</p>
-        <Button 
-          onClick={handleConnect} 
-          className="bg-blue-600 hover:bg-blue-700 text-white"
+        <Link href="/signup">
+        <button 
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
         >
-          Connect Wallet
-        </Button>
+        Connect Wallet
+        </button>
+        </Link>
       </div>
 
       {/* Footer */}

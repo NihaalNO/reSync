@@ -61,7 +61,7 @@ export const SparklesCore = (props: ParticlesProps) => {
           options={{
             background: {
               color: {
-                value: background || "#0d47a1",
+                value: background || "#000",
               },
             },
             fullScreen: {
@@ -95,10 +95,10 @@ export const SparklesCore = (props: ParticlesProps) => {
             particles: {
               bounce: {
                 horizontal: {
-                  value: 1,
+                  value: 10,
                 },
                 vertical: {
-                  value: 1,
+                  value: 10,
                 },
               },
               collisions: {
@@ -107,10 +107,10 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
                 bounce: {
                   horizontal: {
-                    value: 1,
+                    value: 10,
                   },
                   vertical: {
-                    value: 1,
+                    value: 10,
                   },
                 },
                 enable: false,
